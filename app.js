@@ -413,7 +413,7 @@
     const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(`${foreignWord} ${word.japanese}`)}`;
     const sourceLanguage = getGoogleTranslateLanguage(activeSession.language);
     const googleTranslateUrl = `https://translate.google.com/?sl=${encodeURIComponent(sourceLanguage)}&tl=ja&text=${encodeURIComponent(example.foreign)}&op=translate`;
-    const chatGptPrompt = `次の${languageLabels[activeSession.language]}の文章を文法的に解説してください。単語ごとの意味、文法構造、自然な日本語訳を、初学者にも分かりやすく説明してください。\n\n${example.foreign}\n\n参考の日本語訳：${example.japanese}`;
+    const chatGptPrompt = `次の${languageLabels[activeSession.language]}の文章を文法的に解説してください。`;
     const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(chatGptPrompt)}`;
     const externalLinkStyle = "display:flex;align-items:center;justify-content:center;text-decoration:none;text-align:center";
     const feedback = document.getElementById("feedbackArea");
